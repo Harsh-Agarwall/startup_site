@@ -8,14 +8,41 @@ export default async function Home({searchParams}: {searchParams: Promise<{query
       {
         _createAt:new Date(),
         views:55,
-        author:{_id:1},
+        author:{_id:1,name:"Harsh"},
         _id:1,
         description:"this is a description",
-        image:"https://images.unsplash.com/photo-1696140986791-4f2a0b5c3d7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+        image:"https://placehold.co/600x400",
         category:"robot",
         title:"we robot",
       },
-       
+        {
+        _createAt:new Date(),
+        views:55,
+        author:{_id:1,name:"Harsh"},
+        _id:4,
+        description:"this is a description",
+        image:"https://placehold.co/600x400",
+        category:"robot",
+        title:"we robot",
+      }, {
+        _createAt:new Date(),
+        views:55,
+        author:{_id:1,name:"Harsh"},
+        _id:2,
+        description:"this is a description",
+        image:"https://placehold.co/600x400",
+        category:"robot",
+        title:"we robot",
+      }, {
+        _createAt:new Date(),
+        views:55,
+        author:{_id:1,name:"Harsh"},
+        _id:3,
+        description:"this is a description",
+        image:"https://placehold.co/600x400",
+        category:"robot",
+        title:"we robot",
+      },
     ];
   return (
     

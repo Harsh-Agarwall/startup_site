@@ -5,12 +5,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const StartupCard = ({post}:{post:StartupCardType}) => {
+  // const { _createAt ,views, author:{}, _id, title, description, image, category } =post;
   return (
-     <li className="startup-card group">
+     <li className="startup-card !shadow-sm group">
       <div className="flex-between">
         <p className="startup_card_date text-black">{formatDate(post._createAt)}</p>
         <div className="flex gap-1.5">
-          <EyeIcon className="size-6 text-primary" />
+          <EyeIcon className="size-6 text-black" />
           <span className="text-16-medium">{post.views}</span>
         </div>
       </div>
@@ -26,7 +27,7 @@ const StartupCard = ({post}:{post:StartupCardType}) => {
         </div>
         <Link href={`/user/${post.author?._id}`}>
           <Image
-            src={post.author?.image!}
+            src="https://placehold.co/48x48"
             alt={post.author?.name!}
             width={48}
             height={48}
