@@ -1,49 +1,52 @@
 import Image from "next/image";
 import Searchform from "../components/Searchform";
 import StartupCard from "../components/StartupCard";
-
+import { STARTUPS_QUERY } from "@/sanity/lib/queries";
+import { client } from "@/sanity/lib/client";
 export default async function Home({searchParams}: {searchParams: Promise<{query?: string}>}) {const query=(await searchParams).query
+   
 
-  const posts=[
-      {
-        _createAt:new Date(),
-        views:55,
-        author:{_id:1,name:"Harsh"},
-        _id:1,
-        description:"this is a description",
-        image:"https://placehold.co/600x400",
-        category:"robot",
-        title:"we robot",
-      },
-        {
-        _createAt:new Date(),
-        views:55,
-        author:{_id:1,name:"Harsh"},
-        _id:4,
-        description:"this is a description",
-        image:"https://placehold.co/600x400",
-        category:"robot",
-        title:"we robot",
-      }, {
-        _createAt:new Date(),
-        views:55,
-        author:{_id:1,name:"Harsh"},
-        _id:2,
-        description:"this is a description",
-        image:"https://placehold.co/600x400",
-        category:"robot",
-        title:"we robot",
-      }, {
-        _createAt:new Date(),
-        views:55,
-        author:{_id:1,name:"Harsh"},
-        _id:3,
-        description:"this is a description",
-        image:"https://placehold.co/600x400",
-        category:"robot",
-        title:"we robot",
-      },
-    ];
+   const posts= await client.fetch(STARTUPS_QUERY);
+  // const posts=[
+  //     {
+  //       _createAt:new Date(),
+  //       views:55,
+  //       author:{_id:1,name:"Harsh"},
+  //       _id:1,
+  //       description:"this is a description",
+  //       image:"https://placehold.co/600x400",
+  //       category:"robot",
+  //       title:"we robot",
+  //     },
+  //       {
+  //       _createAt:new Date(),
+  //       views:55,
+  //       author:{_id:1,name:"Harsh"},
+  //       _id:4,
+  //       description:"this is a description",
+  //       image:"https://placehold.co/600x400",
+  //       category:"robot",
+  //       title:"we robot",
+  //     }, {
+  //       _createAt:new Date(),
+  //       views:55,
+  //       author:{_id:1,name:"Harsh"},
+  //       _id:2,
+  //       description:"this is a description",
+  //       image:"https://placehold.co/600x400",
+  //       category:"robot",
+  //       title:"we robot",
+  //     }, {
+  //       _createAt:new Date(),
+  //       views:55,
+  //       author:{_id:1,name:"Harsh"},
+  //       _id:3,
+  //       description:"this is a description",
+  //       image:"https://placehold.co/600x400",
+  //       category:"robot",
+  //       title:"we robot",
+  //     },
+  //   ];
   return (
     
    <>
