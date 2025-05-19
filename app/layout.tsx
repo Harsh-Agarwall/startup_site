@@ -67,6 +67,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Tailwind CSS with Typography plugin via CDN */}
+      
+        
+       
+      </head>
       <body
         className={workSans.variable}
       >

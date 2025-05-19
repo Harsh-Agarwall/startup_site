@@ -46,9 +46,9 @@ const config: Config = {
         },
     },
     plugins: [
-        // @ts-ignore
+      
         require("tailwindcss-animate"),
-        // @ts-ignore
+     
         require("@tailwindcss/typography")
     ],
 };
