@@ -18,7 +18,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const parsedcontent = md.render(post?.pitch || "");
   return (
     <>
-      <section className="pink_container !min-h-[230px]">
+      <section className="pink_container pattern !min-h-[230px]">
         <p className="tag tag-tri">{formatDate(post?._createdAt)}</p>
         <h1 className="heading">{post.title}</h1>
         <p className="sub-heading !max-w-5xl">{post.description}</p>
