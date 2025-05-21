@@ -4,9 +4,14 @@ import StartupCard, { StartupTypeCard } from "../components/StartupCard";
 import { STARTUPS_QUERY } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
 import { sanityFetch ,SanityLive} from "@/sanity/lib/live";
+import { auth } from "@/auth";
 export default async function Home({searchParams}: {searchParams: Promise<{query?: string}>}) {
    const query=(await searchParams).query;
    const params={search:query||null};
+
+  const session =await auth();
+  console.log(session?.id);
+
    const {data:posts}= await sanityFetch({query:STARTUPS_QUERY,params});
 
   // const posts=[
@@ -54,7 +59,7 @@ export default async function Home({searchParams}: {searchParams: Promise<{query
    <>
    <section className="pink_container pattern ">
 
-   <h1 className="heading rounded-3xl">Pitch Your Startup,<br/>Connect with investors</h1>
+   <h1 className="heading rounded-3xl">Shape Your Startup,<br/>Get recognized</h1>
    <p className="sub-heading !max-w-3xl">Submit your ideas,Vote ideas,get noticed in Virtual Competitions</p>
    <Searchform query={query}/>
    </section>
