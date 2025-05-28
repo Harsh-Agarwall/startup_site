@@ -28,7 +28,7 @@
 ---
 
 ## 📸 Demo
-> 🌐 Live site: [pitchdekho.vercel.app]([https://pitchdekho.vercel.app](https://startup-site-git-main-harsh-agarwals-projects-a10796f3.vercel.app/)) 
+> 🌐 Live site: [pitchdekho.vercel.app](https://startup-site-git-main-harsh-agarwals-projects-a10796f3.vercel.app/) 
 
 ---
 
@@ -46,5 +46,28 @@
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/pitch-dekho.git
-cd pitch-dekho
+git clone https://github.com/Harsh-Agarwall/startup_site.git
+cd startup_site
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+### 3. Environment variables
+```bash
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_secret
+GITHUB_ID=your_github_oauth_client_id
+GITHUB_SECRET=your_github_oauth_client_secret
+SANITY_PROJECT_ID=your_project_id
+SANITY_DATASET=production
+SANITY_API_VERSION=2023-05-01
+```
+### 4. Run the development server
+```bash
+npm run dev
+```
+
+
+
